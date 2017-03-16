@@ -1,11 +1,13 @@
 /* 
 LAST CHECKED 13/03/2017
-Bookmarklet to arrange the Soundcloud comments by timestamp on the track instead of
-date and time the comment was made
+Bookmarklet to sort the currently loaded Soundcloud track comments by timestampe instead of
+date and time the comment was posted
 */ 
 
 // Bookmarklet code/URL - create a bookmark with the line below as the URL
 javascript:(function(){var ul=document.getElementsByClassName('lazyLoadingList__list')[0];var li=ul.getElementsByClassName('commentsList__item');var content=document.getElementsByClassName('commentItem__content');var meta=document.getElementsByClassName('commentItem__meta');var comments=[];for(var i=0;i<content.length;i++){var t=content[i].getElementsByClassName('commentItem__timestampLink')[0];if (t === undefined){t="00:00:00";} else {t=t.innerHTML;var ta=t.split(":");if(ta[0].length===1){ t="0"+t; }if(ta.length===2){ t="00:"+t; }}var dt=meta[i].getElementsByClassName('relativeTime')[0].getAttribute('datetime');comments.push([t,dt,li[i]]);}for(var i=0;i<comments.length;i++){ul.removeChild(comments[i][2]);}comments.sort();for(var i=0;i<comments.length;i++) {ul.appendChild(comments[i][2]);}})();
+
+
 
 
 /*
