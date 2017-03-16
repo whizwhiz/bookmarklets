@@ -1,6 +1,6 @@
 /* 
 LAST CHECKED 13/03/2017
-Bookmarklet to sort the currently loaded Soundcloud track comments by timestampe instead of
+Bookmarklet to sort the currently loaded Soundcloud track comments by timestamp instead of
 date and time the comment was posted
 */ 
 
